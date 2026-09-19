@@ -14,4 +14,4 @@ These examples do not send user-entered data to a server. The hosting service re
 
 ## Relay Garden
 
-`games/relay-garden/` contains a free playable demo with 24 campaign gardens, a daily puzzle, English/Spanish text and local saves. It was developed with generative-AI assistance. See its `NOTICE.md` for scope and usage context. The runtime is public; the separate configuration studio and source-kit documentation are not included in this repository. No paid checkout is active here.
+`games/relay-garden/` contains a free playable demo with 24 campaign gardens, a daily puzzle, English/Spanish text and local saves. It was developed with generative-AI assistance. See its `NOTICE.md` for scope and usage context. The runtime is public; the separate configuration studio and source-kit documentation are not included in this repository. The source kit is available for US$19 through the linked Contra product page. The public demo and portfolio now link to that offer.
