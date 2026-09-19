@@ -1,0 +1,67 @@
+/* The first place to edit when adapting the game for a customer. No build step. */
+window.RelayConfig = {
+  title: 'Relay Garden',
+  storageKey: 'relay-garden-v1',
+  colors: { paper: '#f4f1e8', ink: '#173e34', accent: '#bd5b3d', powered: '#31745c', tile: '#e4e8dc' },
+  levels: Array.from({ length: 24 }, (_, index) => ({
+    seed: `relay-garden-${index + 1}`,
+    size: index === 0 ? 3 : index < 3 ? 3 : index < 9 ? 4 : index < 17 ? 5 : 6,
+    tutorial: index === 0
+  })),
+  text: {
+    en: {
+      eyebrow: 'A LITTLE SPACE TO CONNECT', title: 'Let the garden glow.',
+      intro: 'Turn the paths. Join every stem to the sun. Take your time.',
+      garden: 'Garden', daily: 'Daily garden', studio: 'Custom garden',
+      campaign: '{count} small gardens', journey: 'Your growing collection',
+      campaignHelp: 'Choose any garden. Every connection is a fresh start.',
+      dailyHelp: 'A different, shared puzzle each UTC day.', dailyPlay: 'Play today’s garden',
+      back: 'Back to the gardens', moves: 'Moves', connected: 'Connected',
+      undo: 'Undo', restart: 'Restart', hint: 'Give me a hint',
+      soundOn: 'Sound on', soundOff: 'Sound off', language: 'Español',
+      howTitle: 'One simple idea', how: 'Tap a tile to turn it clockwise. Connect every path to the sun, with no loose ends.',
+      keyboard: 'Keyboard: arrows move focus; Enter or Space turns a tile. Shift + Enter turns it back.',
+      first: 'Start here: turn the highlighted middle tile once.',
+      source: 'The sun stays still. Build your connections from here.',
+      open: 'loose ends', complete: 'Garden in bloom',
+      winText: 'Every stem is connected. A little patience, a little light.',
+      next: 'Next garden', stay: 'Enjoy this garden', allDone: 'All gardens are in bloom.',
+      noRush: 'No timer. No rush.', saved: 'Progress stays on this device.',
+      noSave: 'Progress cannot be saved in this browser session.',
+      hintNote: 'One tile is now facing its original solution.',
+      row: 'Row', column: 'column', powered: 'connected', unpowered: 'not connected',
+      directions: ['north', 'east', 'south', 'west'], paths: 'paths',
+      finished: 'completed', notFinished: 'not completed',
+      detail: 'moves', oneMove: 'move', hintCount: 'hints', oneHint: 'hint',
+      puzzle: 'Puzzle', board: 'Puzzle board', choose: 'Choose a garden',
+      resetMessage: 'This garden has been restarted.'
+    },
+    es: {
+      eyebrow: 'UN PEQUEÑO ESPACIO PARA CONECTAR', title: 'Haz florecer el jardín.',
+      intro: 'Gira los caminos. Conecta cada tallo con el sol. A tu ritmo.',
+      garden: 'Jardín', daily: 'Jardín del día', studio: 'Jardín personalizado',
+      campaign: '{count} pequeños jardines', journey: 'Tu colección crece',
+      campaignHelp: 'Elige cualquier jardín. Cada conexión es un nuevo comienzo.',
+      dailyHelp: 'Un rompecabezas compartido distinto cada día UTC.', dailyPlay: 'Jugar el jardín de hoy',
+      back: 'Volver a los jardines', moves: 'Movimientos', connected: 'Conectados',
+      undo: 'Deshacer', restart: 'Reiniciar', hint: 'Dame una pista',
+      soundOn: 'Sonido activado', soundOff: 'Sonido apagado', language: 'English',
+      howTitle: 'Una idea sencilla', how: 'Toca una ficha para girarla a la derecha. Conecta todos los caminos con el sol sin dejar extremos sueltos.',
+      keyboard: 'Teclado: flechas para moverte; Enter o Espacio para girar. Shift + Enter gira al revés.',
+      first: 'Empieza aquí: gira una vez la ficha central resaltada.',
+      source: 'El sol permanece fijo. Empieza a conectar desde aquí.',
+      open: 'extremos sueltos', complete: 'El jardín floreció',
+      winText: 'Todos los tallos están conectados. Un poco de paciencia, un poco de luz.',
+      next: 'Siguiente jardín', stay: 'Disfrutar este jardín', allDone: 'Todos los jardines han florecido.',
+      noRush: 'Sin reloj. Sin prisa.', saved: 'Tu avance se guarda en este dispositivo.',
+      noSave: 'No se puede guardar el avance en esta sesión del navegador.',
+      hintNote: 'Una ficha apunta ahora a su solución original.',
+      row: 'Fila', column: 'columna', powered: 'conectada', unpowered: 'sin conectar',
+      directions: ['norte', 'este', 'sur', 'oeste'], paths: 'caminos',
+      finished: 'completado', notFinished: 'sin completar',
+      detail: 'movimientos', oneMove: 'movimiento', hintCount: 'pistas', oneHint: 'pista',
+      puzzle: 'Rompecabezas', board: 'Tablero', choose: 'Elige un jardín',
+      resetMessage: 'Este jardín se reinició.'
+    }
+  }
+};

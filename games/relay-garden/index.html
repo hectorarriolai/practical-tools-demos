@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173e34">
+  <meta name="description" content="A calm connection puzzle. Rotate the paths and bring every stem back to the sun.">
+  <title>Relay Garden — A little space to connect</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="core.js" defer></script><script src="config.js" defer></script><script src="game.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><img src="icon.svg" alt="" width="34" height="34"><span id="brand-title">Relay Garden</span></a>
+    <div class="preferences"><button id="sound" class="small-button" type="button">Sound off</button><button id="language" class="small-button" type="button">Español</button></div>
+  </header>
+  <main>
+    <section class="intro"><p class="eyebrow" data-i18n="eyebrow"></p><h1 data-i18n="title"></h1><p data-i18n="intro"></p></section>
+    <div class="layout">
+      <section class="game-panel" aria-label="Puzzle">
+        <div class="game-heading"><div><span class="eyebrow" id="mode-label"></span><h2 id="level-title"></h2></div><span class="calm-label" data-i18n="noRush"></span></div>
+        <div class="board-wrap"><div id="board" role="group" aria-label="Puzzle board"></div></div>
+        <div class="metrics"><div><span data-i18n="connected"></span><strong id="connected">0 / 9</strong></div><div class="progress-track" aria-hidden="true"><i id="progress-bar"></i></div><div class="moves"><span data-i18n="moves"></span><strong id="moves">0</strong></div></div>
+        <p id="loose-ends" class="status-line"></p>
+        <div class="controls"><button id="undo" type="button" data-i18n="undo"></button><button id="restart" type="button" data-i18n="restart"></button><button id="hint" type="button" class="accent-button" data-i18n="hint"></button></div>
+        <p id="tutorial-note" class="tutorial-note" data-i18n="first"></p>
+        <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+      </section>
+      <aside class="sidebar">
+        <section class="collection-card"><p class="eyebrow" data-i18n="journey"></p><div class="collection-heading"><h2 data-i18n="campaign"></h2><span id="completed-count">0 / 24</span></div><p class="muted" data-i18n="campaignHelp"></p><div id="level-picker" class="level-picker" aria-label="Choose a garden"></div></section>
+        <section class="daily-card"><div class="daily-symbol" aria-hidden="true">✳</div><div><h2 data-i18n="daily"></h2><p data-i18n="dailyHelp"></p><button id="daily" type="button" data-i18n="dailyPlay"></button></div></section>
+        <section class="how-card"><h2 data-i18n="howTitle"></h2><p data-i18n="how"></p><p class="keyboard-help" data-i18n="keyboard"></p><span class="legend-dot"></span><span class="legend-text" data-i18n="source"></span></section>
+      </aside>
+    </div>
+    <footer><span id="save-status" data-i18n="saved"></span><span>Héctor R. Sepúlveda A. · 2026</span></footer>
+  </main>
+  <dialog id="win-dialog" aria-labelledby="win-title"><div class="win-art" aria-hidden="true">✳</div><p class="eyebrow" data-i18n="complete"></p><h2 id="win-title" data-i18n="complete"></h2><p data-i18n="winText"></p><p id="win-stats"></p><div class="dialog-actions"><button id="next" type="button" class="primary-button" data-i18n="next"></button><button id="stay" type="button" data-i18n="stay"></button></div></dialog>
+  <noscript>This puzzle needs JavaScript. / Este rompecabezas necesita JavaScript.</noscript>
+</body>
+</html>
