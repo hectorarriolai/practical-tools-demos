@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-09-19T19:06:11.030515+00:00",
+  "fixture": "Two-page fictional, selectable-text, single-column PDF",
+  "source_pdf_sha256": "6586ea1b99cb666a536db510356a1a0afc568be9184ed075d8ef599b5a29cb48",
+  "workbook_sha256": "c547278fb847de4b1aec43bf32254dc0c97b5e72008a31248d584f321cd6fd6b",
+  "source_pages": 2,
+  "source_lines": 28,
+  "workbook_records": 28,
+  "pdf_text_matches_authored_fixture": true,
+  "saved_workbook_matches_pdf_text": true,
+  "source_line_order_and_page_numbers_match": true,
+  "all_extracted_text_cells_are_strings": true,
+  "formula_count": 0,
+  "error_cell_count": 0,
+  "line_break_representation": "Each visible source text line has its own Excel row, with source page and line number. Visual spacing and blank areas are not reconstructed.",
+  "limitations": "This check covers only the provided known fixture. It does not establish accuracy for arbitrary PDFs, scans, multiple columns, tables or images. No OCR was used."
+}
