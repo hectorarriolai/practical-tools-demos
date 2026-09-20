@@ -1,0 +1,17 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const core = require('./demos/sales-report/report-core.js');
+const head = core.headers.join(',') + '\n';
+assert.deepEqual(core.totals(core.readCSV(head + '2026-09-01,Direct,2,0.30,0.10\n2026-09-02,Direct,3,99.70,9.90')), {orders:5,gross:10000,refunds:1000,net:9000,refundRate:0.1});
+assert.equal(core.readCSV('\uFEFF'+head+'2026-09-01,"Partner, referral",0,0,0')[0].channel,'Partner, referral');
+assert.equal(core.totals(core.readCSV(head+'2026-09-01,Direct,0,0,0')).refundRate,null);
+for (const row of ['2026-02-30,Direct,1,10,0','2026-09-01,Direct,,10,0','2026-09-01,Direct,1,10,11','2026-09-01,Direct,1,,0','2026-09-01,Direct,1,1.234,0']) assert.throws(()=>core.readCSV(head+row));
+assert.throws(()=>core.readCSV(head+'2026-09-01,Direct,1,10,0\n2026-09-01,Direct,1,10,0'));
+assert.throws(()=>core.readCSV(head+'2026-09-01,"Broken,1,10,0'));
+assert.throws(()=>core.readCSV(head));
+const rows=core.readCSV(fs.readFileSync('demos/sales-report/sample-sales.csv','utf8'));
+const t=core.totals(rows);
+assert.equal(rows.length,18);assert.equal(t.orders,731);assert.equal(t.gross,5356000);assert.equal(t.refunds,129000);assert.equal(t.net,5227000);
+const extra=core.readCSV(head+'2026-09-16,Direct,1,10,0');
+assert.equal(core.totals([...rows,...extra]).net,t.net+1000);
+console.log(JSON.stringify({result:'PASS',checks:'currency precision, missing values, zero denominator, invalid dates, duplicate keys, malformed CSV, refresh with a new record, independent sample totals',sampleTotals:t}));
