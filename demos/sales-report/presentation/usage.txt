@@ -1,0 +1,15 @@
+EDITABLE SALES REVIEW SAMPLE
+
+Three slides with fictional sales data, created with AI assistance as an original portfolio demonstration. The source contains 18 rows for six weeks from 10 August to 14 September 2026. No real client or seller earnings appear in this file.
+
+EDITING
+The title and text are editable. Slide 2 contains one native column chart with an embedded workbook snapshot. In PowerPoint, select the chart and use Edit Data to change its six weekly values and labels. Slide 3 contains a native table whose cells can be edited directly. The table and title figures do not recalculate when you change the chart; update them separately and check the totals.
+
+The deck uses Arial and a 16:9 layout. It has no macros. The original CSV is available at https://hectorarriolai.github.io/practical-tools-demos/demos/sales-report/sample-sales.csv . This presentation is a fixed snapshot and does not update automatically from that CSV or from the browser report filters.
+
+Fictional source totals: 731 orders, USD 53,560 gross sales, USD 1,290 refunds and USD 52,270 net sales. Net sales exclude operating costs and taxes.
+
+LIMITS
+Rendered slide previews and the PPTX structure were checked. Native PowerPoint editing and Google Slides import have not been tested. Check the file in your target application before reuse. This sample is an original layout; reproducing a client's PDF requires review of the original pages, fonts and image rights.
+
+For a scoped presentation template: https://contra.com/s/sQEZALvE-reusable-business-report-and-presentation-templates
