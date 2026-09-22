@@ -1,0 +1,5 @@
+Narrated slide demonstration
+
+Original portfolio sample. AI-generated narration reused unchanged from Héctor's existing HeyGen introduction. Four original title cards, not a client project or a conversion of the separate sales-review PPTX.
+
+Hi, I'm Hector. I help small teams turn repetitive work into practical digital tools: clear dashboards, cleaner spreadsheets, useful automations, and focused websites. We start with one problem, agree on the scope, and check the result against your requirements. I use AI-assisted development to build and iterate efficiently. Send me a short brief on Contra, in English or Spanish, and let's define your first project.
